@@ -1,3 +1,5 @@
+const User = require('../models/User')
+
 // GET Sign-up Page
 function signup_get ( req, res ) {
     res.render('signup');
@@ -9,17 +11,22 @@ function login_get ( req, res ) {
 };
 
 // POST Sign-up Form Action
-function signup_post ( req, res ) {
+async function signup_post ( req, res ) {
     const { email, password } = req.body;
     
-
-    res.send('signup operation');
+    try {
+        const user = await User.create({ email: email, password: password })
+        res.status(201).json(user)
+    }
+    catch ( err ) {
+        res.status(400).send(err);
+    }
 };
 
 // POST Login form action at Login form page
-function login_post ( req, res ) {
+async function login_post ( req, res ) {
     const { email, password } = req.body;
-    
+
     res.send('login operation')
 }
 
