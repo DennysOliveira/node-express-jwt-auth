@@ -41,12 +41,16 @@ function createToken ( id ) {
 
 // GET Sign-up Page
 function signup_get ( req, res ) {
-    res.render('signup');
+    res.render('signup', {
+        title: 'Sign-up'
+    });
 };
 
 // GET Login Page
 function login_get ( req, res ) {
-    res.render('login');
+    res.render('login', {
+        title: 'Login'
+    });
 };
 
 // POST Sign-up Form Action
