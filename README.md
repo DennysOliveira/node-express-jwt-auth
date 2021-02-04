@@ -26,12 +26,14 @@ Make sure you change your **username**, **password** and **dbname** accordingly.
 
 
 ### Installing dependencies
-After you've setup your database string, you should install the dependencies using the following command at any command line interface.  
-```npm install```
+After you've setup your database string, you should install the dependencies using the following command at any command line interface:  
+```npm install```  
+
 Make sure you run this command inside the Root Directory (node-express-jwt-auth/), where you can find the `package.json` file.  
 
+
 ### Running the application
-To run the application, I use `nodemon` installed globally, but you can run it once using `npx nodemon app`.  
+To run this application, I use `nodemon` installed globally, but you can run it once using `npx nodemon app`.  
 At `nodemon`, **app** refers to the app.js file that is used as the main file of this application.   
 
 After running `nodemon`, you should expect your command line to show the following message:
