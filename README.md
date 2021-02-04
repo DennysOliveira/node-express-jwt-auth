@@ -10,7 +10,9 @@ Session is kept with JWT tokens and authenticated in every request that needs it
 To be done...
 
 
-## How to run this application
+## How to run
+
+### Setting up Environment Variables
 First, clone the repository and create a ```.env``` file with the following data:
 ```
 DB_URI=mongodb+srv://<username>:<password>@clustername.something.mongodb.net/<dbname>
@@ -23,16 +25,23 @@ Make sure you change your **username**, **password** and **dbname** accordingly.
 - JWT_SECRET is used to generate JWT Tokens - that should be a secret string - you can change it to whatever you want.
 
 
-### Running the Application
+### Installing dependencies
 After you've setup your database string, you should install the dependencies using the following command at any command line interface.  
 ```npm install```
 Make sure you run this command inside the Root Directory (node-express-jwt-auth/), where you can find the `package.json` file.  
 
+### Running the application
 To run the application, I use `nodemon` installed globally, but you can run it once using `npx nodemon app`.  
-At nodemon, **app** refers to the app.js file that is used as the main file of this application.  
+At `nodemon`, **app** refers to the app.js file that is used as the main file of this application.   
 
+After running `nodemon`, you should expect your command line to show the following message:
+`> server listening on port XXXX`  
 
-### `package.json` dependencies:
+#### If you open your browser and head to `localhost:port`, e.g. localhost:3000 at my server, you should see the following page:
+![img](screenshots/homepage.png)  
+ 
+
+#### `package.json` dependencies:
 ```json
 dependencies": {
     "bcrypt": "^5.0.0",
