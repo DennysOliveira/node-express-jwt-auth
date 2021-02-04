@@ -1,6 +1,11 @@
 <%- include('partials/header'); -%>
-
+<script>
+    
+</script>
 <form>
+    <% if (typeof redirected !== 'undefined') { %>
+       <div class="error">Você precisa estar logado para ver essa página.</div> 
+    <% } %> 
     <h2>Login</h2>
 
     <label for='email'>Email</label>
